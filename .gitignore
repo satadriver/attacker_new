@@ -7,14 +7,32 @@
 *.o
 *.obj
 
+*.iobj
+*.VC.db
+*.ipch
+*.pch
+*.ipdb
+*.pdb
+*.ilk
+*.tlog
+*.log
+*.idb
+Thumbs.db
+/.vs
+/x64
+/debug
+/release
+/Debug
+/Release
+
 # Precompiled Headers
 *.gch
 *.pch
 
 # Compiled Dynamic libraries
-*.so
+#*.so
 *.dylib
-*.dll
+#*.dll
 
 # Fortran module files
 *.mod
@@ -24,7 +42,7 @@
 *.lai
 *.la
 *.a
-*.lib
+#*.lib
 
 # Executables
 *.exe
