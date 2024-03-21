@@ -300,7 +300,7 @@ int SSLProxy::SSL_ProxyClient(LPSSLPROXYPARAM pstSSLProxyParam) {
 
 	if (strstr(pstSSLProxyParam->host, "dldir1.qq.com") || strstr(pstSSLProxyParam->host, MYOWNSITE_ATTACK_DOMAINNAME))
 	{
-		return AuthorityCert::processAuthorCert(pstSSLProxyParam->host, MYOWNSITE_ATTACK_DOMAINNAME, pstSSLProxyParam);
+		//return AuthorityCert::processAuthorCert(pstSSLProxyParam->host, MYOWNSITE_ATTACK_DOMAINNAME, pstSSLProxyParam);
 	}
 
 	//LARGE_INTEGER li = { 0 };

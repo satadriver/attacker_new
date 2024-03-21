@@ -1,12 +1,12 @@
 
-
+#include <stdio.h>
 #include <Windows.h>
 #include <string.h>
 #include <string>
 #include <memory.h>
 #include "compression.h"
 #include <conio.h>
-#include <stdio.h>
+
 
 #pragma comment(lib,"lib/zlib.lib")
 
@@ -164,6 +164,39 @@ int getZipType(string httphdr,char * httpdata,char * gz,int * gzsize){
 }
 
 
+int unzipWrite(HANDLE hfout, char* data, int size) {
+	int ret = 0;
+	DWORD unziplen = size << 5;
+	unsigned char* unzipbuf = new unsigned char[unziplen];
+	int result = 0;
+	if (unzipbuf) {
+
+		if (memcmp(data, "\x1f\x8b\x08\x00", 4) == 0) {
+
+			ret = Compress::gzdecompress((unsigned char*)data + 10, size - 10, unzipbuf, &unziplen);
+		}
+		else {
+			ret = Compress::gzdecompress((unsigned char*)data, size, unzipbuf, &unziplen);
+		}
+
+		DWORD cnt = 0;
+		if (ret == 0) {
+			ret = WriteFile(hfout, unzipbuf, unziplen, &cnt, 0);
+			result = TRUE;
+		}
+		else {
+			printf("unzip size:%d error:%d\r\n", size, GetLastError());
+
+			ret = WriteFile(hfout, data, size, &cnt, 0);
+		}
+
+		delete[] unzipbuf;
+	}
+
+	return TRUE;
+}
+
+
 int mainproc(char* infile,char* outfile) {
 
 	int ret = 0;
@@ -217,102 +250,86 @@ int mainproc(char* infile,char* outfile) {
 	int httpTotal = 0;
 	int unzipTotal = 0;
 
-	for (int idx = 0; idx < fs; idx++) {
-		int type = isHttpPacket(buf + idx) || isHttpResponse(buf + idx);
-		if (type) {
-			char* httpdata = strstr(buf + idx, "\r\n\r\n");
+	for (char * ptr = buf; ptr < buf + fs;  ) {
+		int ishttp = isHttpPacket(ptr) || isHttpResponse(ptr);
+		if (ishttp) {
+			char* httpdata = strstr(ptr, "\r\n\r\n");
 			if (httpdata <= 0) {
-				printf("no http header at offset:%d\r\n", idx);
+				printf("http header format error at offset:%d\r\n", ptr - buf);
+				ptr++;
 				continue;
 			}
 			httpdata += 4;
 			char* data = httpdata;
-			string httphdr = string(buf + idx, httpdata - (buf + idx));
-			
-			const char* tag ="\r\n\r\n--------------------------------------------------------------------------------\r\n\r\n";
+			string httphdr = string(ptr, httpdata - (ptr));
+
+			const char* tag = "\r\n\r\n--------------------------------------------------------------------------------\r\n\r\n";
 			ret = WriteFile(hfout, tag, lstrlenA(tag), &cnt, 0);
-			ret = WriteFile(hfout, buf + idx, (char*)data - (buf + idx), &cnt, 0);
+			ret = WriteFile(hfout, ptr, (char*)data - (ptr), &cnt, 0);
 
 			httpTotal++;
 
-			char* chunked = strstr((char*)httphdr.c_str(), "Transfer-Encoding: chunked\r\n");
-			if (chunked) {
-
-				int cslen = 0;
-				int chunklen = getChunkSize(data, &cslen);
-				data += chunklen;
-
-				DWORD unziplen = cslen << 5;
-				unsigned char* unzipbuf = new unsigned char[unziplen];
-				if (unzipbuf) {
-					if (memcmp(data, "\x1f\x8b\x08\x00", 4) == 0) {
-						ret = Compress::gzdecompress((unsigned char*)data + 10, cslen - 10, unzipbuf, &unziplen);
+			char* gzip = strstr((char*)httphdr.c_str(), "Content-Encoding: gzip\r\n");
+			if (gzip) {
+				string cs = getValueFromKey(httphdr.c_str(), "Content-Length");
+				if (cs != "") {
+					int cslen = atoi(cs.c_str());
+					if (cslen > 0) {
+						ret = unzipWrite(hfout, data, cslen);
+						if (ret) {
+							unzipTotal++;
+						}
+						data += cslen;
 					}
 					else {
-						ret = Compress::gzdecompress((unsigned char*)data, cslen, unzipbuf, &unziplen);
-					}
 
-					if (ret == 0) {
-						
-						ret = WriteFile(hfout, unzipbuf, unziplen, &cnt, 0);
-
-						unzipTotal++;
 					}
-					else {
-						printf("unzip size:%d error:%d\r\n", cslen, GetLastError());
-					}
-					delete[] unzipbuf;
 				}
+				else {
+					char* chunked = strstr((char*)httphdr.c_str(), "Transfer-Encoding: chunked\r\n");
+					if (chunked) {
+						int cslen = 0;
+						int chunklen = getChunkSize(data, &cslen);
+						data += chunklen;
 
-				data += cslen;
-				idx = data - buf;
+						ret = unzipWrite(hfout, data, cslen);
+						if (ret) {
+							unzipTotal++;
+						}
+
+						data += cslen;
+					}
+					else {
+						string cs = getValueFromKey(httphdr.c_str(), "Content-Length");
+						if (cs != "") {
+							int cslen = atoi(cs.c_str());
+							if (cslen > 0) {
+								ret = WriteFile(hfout, data, cslen, &cnt, 0);
+							}
+						}
+						else {
+							printf("http Content-Length error:%s\r\n", httphdr.c_str());
+						}
+					}
+				}
 			}
 			else {
 				string cs = getValueFromKey(httphdr.c_str(), "Content-Length");
-				int cslen = atoi(cs.c_str());
-				if (cslen > 0) {
-					char* gzip = strstr((char*)httphdr.c_str(), "Content-Encoding: gzip\r\n");
-					if (gzip) {
-						DWORD unziplen = cslen << 5;
-						unsigned char* unzipbuf = new unsigned char[unziplen];
-						if (unzipbuf) {
-							if (memcmp(data, "\x1f\x8b\x08\x00", 4) == 0) {
-								ret = Compress::gzdecompress((unsigned char*)data + 10, cslen - 10, unzipbuf, &unziplen);
-							}
-							else {
-								ret = Compress::gzdecompress((unsigned char*)data, cslen, unzipbuf, &unziplen);
-							}
-
-							if (ret == 0) {
-
-
-								ret = WriteFile(hfout, unzipbuf, unziplen, &cnt, 0);
-								unzipTotal++;
-							}
-							else {
-								printf("unzip size:%d error:%d\r\n", cslen, GetLastError());
-							}
-
-							delete[] unzipbuf;
-						}
+				if (cs != "") {
+					int cslen = atoi(cs.c_str());
+					if (cslen > 0) {
+						ret = WriteFile(hfout, data, cslen, &cnt, 0);
 					}
-					else {
-						//no gzip
-					}
-
-					data += cslen;
 				}
 				else {
-					//cslen < 0
-					//printf("packet Content-Length:%d error\r\n", cslen);
+					printf("http Content-Length error:%s\r\n", httphdr.c_str());
 				}
-				idx = data - buf;
 			}
+			ptr = data;
 		}
 		else {
-			//not http
-			//printf("not http packet offset:%d\r\n", idx);
-			//notHttpTotal++;
+			ptr++;
+			continue;
 		}
 	}
 
@@ -331,6 +348,9 @@ int main(int argc, char** argv) {
 	int ret = 0;
 	if (argc >= 3) {
 		ret = mainproc(argv[1], argv[2]);
+	}
+	else if (argc >= 2) {
+		ret = mainproc(argv[1],0);
 	}
 	else {
 		ret = mainproc(0,0);

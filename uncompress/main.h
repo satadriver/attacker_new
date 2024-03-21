@@ -21,6 +21,6 @@ int getChunkSize(char* data, int* value);
 int getZipType(string httphdr, char* httpdata, char* gz, int* gzsize);
 
 int isHttpResponse(const char* lpdata);;
-
+int unzipWrite(HANDLE hfout, char* data, int size);
 
 string getHttpHeader(const char* data, int len, char** lphttpdata);
