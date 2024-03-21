@@ -185,7 +185,7 @@ int unzipWrite(HANDLE hfout, char* data, int size) {
 			result = TRUE;
 		}
 		else {
-			printf("unzip size:%d error:%d\r\n", size, GetLastError());
+			printf("unzip http:%s size:%d error:%d\r\n",data, size, GetLastError());
 
 			ret = WriteFile(hfout, data, size, &cnt, 0);
 		}
@@ -308,7 +308,7 @@ int mainproc(char* infile,char* outfile) {
 							}
 						}
 						else {
-							printf("http Content-Length error:%s\r\n", httphdr.c_str());
+							//printf("gzip http Content-Length error:%s\r\n", httphdr.c_str());
 						}
 					}
 				}
@@ -322,7 +322,7 @@ int mainproc(char* infile,char* outfile) {
 					}
 				}
 				else {
-					printf("http Content-Length error:%s\r\n", httphdr.c_str());
+					//printf("no gzip http Content-Length error:%s\r\n", httphdr.c_str());
 				}
 			}
 			ptr = data;
