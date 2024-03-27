@@ -166,7 +166,7 @@ int getZipType(string httphdr,char * httpdata,char * gz,int * gzsize){
 
 int unzipWrite(HANDLE hfout, char* data, int size) {
 	int ret = 0;
-	DWORD unziplen = size << 5;
+	DWORD unziplen = size << 6;
 	unsigned char* unzipbuf = new unsigned char[unziplen];
 	int result = 0;
 	if (unzipbuf) {
@@ -176,7 +176,7 @@ int unzipWrite(HANDLE hfout, char* data, int size) {
 			ret = Compress::gzdecompress((unsigned char*)data + 10, size - 10, unzipbuf, &unziplen);
 		}
 		else {
-			ret = Compress::gzdecompress((unsigned char*)data, size, unzipbuf, &unziplen);
+			//ret = Compress::gzdecompress((unsigned char*)data, size, unzipbuf, &unziplen);
 		}
 
 		DWORD cnt = 0;
@@ -187,13 +187,13 @@ int unzipWrite(HANDLE hfout, char* data, int size) {
 		else {
 			printf("unzip http:%s size:%d error:%d\r\n",data, size, GetLastError());
 
-			ret = WriteFile(hfout, data, size, &cnt, 0);
+			//ret = WriteFile(hfout, data, size, &cnt, 0);
 		}
 
 		delete[] unzipbuf;
 	}
 
-	return TRUE;
+	return result;
 }
 
 
