@@ -1,0 +1,64 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 81 (0x51)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=California, L=Los Angeles, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Global Root CA/emailAddress=www.digicert.com
+        Validity
+            Not Before: May 12 07:43:12 2026 GMT
+            Not After : May  9 07:43:12 2036 GMT
+        Subject: C=US, ST=California, L=Los Angeles, O=DigiCert Inc, OU=www.digicert.com, CN=webrtcpunch.video.qq.com/emailAddress=www.digicert.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (1024 bit)
+                Modulus:
+                    00:9f:da:4d:30:f2:cb:f3:f6:5a:1f:45:d6:01:6e:
+                    93:95:9f:90:1b:7f:9b:d9:fe:7d:0f:02:9d:f1:0e:
+                    22:8e:3f:36:c2:21:ba:86:09:4b:1e:e6:cd:ed:83:
+                    d6:aa:10:b9:e7:df:f8:97:1d:2f:68:4a:38:44:c1:
+                    f4:60:e7:c1:7c:0c:f7:b1:f3:06:21:f2:4d:4a:e6:
+                    a9:08:09:67:d0:ab:b1:2f:7f:13:7c:84:53:b9:55:
+                    3a:dd:45:5a:ed:28:b4:de:a1:ba:13:c4:52:c7:d1:
+                    7f:be:a6:ac:12:be:93:b8:a6:11:a1:2b:4b:1a:9e:
+                    8d:9b:3e:fb:a2:7e:2d:03:15
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Alternative Name: 
+                DNS:webrtcpunch.video.qq.com
+    Signature Algorithm: sha256WithRSAEncryption
+         34:1f:0a:1e:3d:98:97:ca:08:e6:0b:ab:a0:8f:a0:42:f4:d8:
+         e4:6c:df:db:66:69:7a:8c:31:4c:da:23:ee:83:54:7b:76:54:
+         21:7c:79:ac:bf:7a:ec:53:f3:55:66:f1:59:f3:68:ba:c2:3c:
+         27:e6:3e:2e:34:be:68:d9:5e:cc:db:01:32:81:96:4c:62:9c:
+         a7:71:1b:84:72:53:9e:90:14:44:da:ce:be:5c:0f:ee:31:78:
+         2a:d2:6e:cd:0e:fc:f8:e3:aa:2f:a6:3e:a8:f4:a4:a7:c3:42:
+         6a:ec:28:23:06:b9:0a:0e:94:d5:3c:b1:b6:07:c1:78:86:68:
+         07:cf:0b:4d:31:3c:67:2e:d6:5d:e2:de:da:5a:de:16:e8:c3:
+         7d:87:f1:aa:bc:52:dc:fe:45:70:b9:90:53:df:60:ad:10:8c:
+         c7:e3:a4:92:2c:bb:30:a8:60:e7:91:80:ea:dc:29:9c:74:bb:
+         0a:70:78:f7:a0:22:e0:a3:49:1f:4a:8b:80:4c:0c:aa:c3:32:
+         29:30:d9:da:f8:57:89:42:35:9f:cc:9d:e2:8a:0c:b8:18:b0:
+         72:b0:e0:db:55:fd:e4:91:94:b3:b7:be:2e:17:91:84:ac:86:
+         e8:56:5c:81:dc:1a:1c:f4:f1:4d:9f:5e:67:f8:4e:15:f9:6c:
+         04:c1:5f:da
+-----BEGIN CERTIFICATE-----
+MIIDezCCAmOgAwIBAgIBUTANBgkqhkiG9w0BAQsFADCBrTELMAkGA1UEBhMCVVMx
+EzARBgNVBAgMCkNhbGlmb3JuaWExFDASBgNVBAcMC0xvcyBBbmdlbGVzMRUwEwYD
+VQQKDAxEaWdpQ2VydCBJbmMxGTAXBgNVBAsMEHd3dy5kaWdpY2VydC5jb20xIDAe
+BgNVBAMMF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMR8wHQYJKoZIhvcNAQkBFhB3
+d3cuZGlnaWNlcnQuY29tMB4XDTI2MDUxMjA3NDMxMloXDTM2MDUwOTA3NDMxMlow
+ga4xCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRQwEgYDVQQHDAtM
+b3MgQW5nZWxlczEVMBMGA1UECgwMRGlnaUNlcnQgSW5jMRkwFwYDVQQLDBB3d3cu
+ZGlnaWNlcnQuY29tMSEwHwYDVQQDDBh3ZWJydGNwdW5jaC52aWRlby5xcS5jb20x
+HzAdBgkqhkiG9w0BCQEWEHd3dy5kaWdpY2VydC5jb20wgZ8wDQYJKoZIhvcNAQEB
+BQADgY0AMIGJAoGBAJ/aTTDyy/P2Wh9F1gFuk5WfkBt/m9n+fQ8CnfEOIo4/NsIh
+uoYJSx7mze2D1qoQueff+JcdL2hKOETB9GDnwXwM97HzBiHyTUrmqQgJZ9CrsS9/
+E3yEU7lVOt1FWu0otN6huhPEUsfRf76mrBK+k7imEaErSxqejZs++6J+LQMVAgMB
+AAGjJzAlMCMGA1UdEQQcMBqCGHdlYnJ0Y3B1bmNoLnZpZGVvLnFxLmNvbTANBgkq
+hkiG9w0BAQsFAAOCAQEANB8KHj2Yl8oI5guroI+gQvTY5Gzf22ZpeowxTNoj7oNU
+e3ZUIXx5rL967FPzVWbxWfNousI8J+Y+LjS+aNlezNsBMoGWTGKcp3EbhHJTnpAU
+RNrOvlwP7jF4KtJuzQ78+OOqL6Y+qPSkp8NCauwoIwa5Cg6U1TyxtgfBeIZoB88L
+TTE8Zy7WXeLe2lreFujDfYfxqrxS3P5FcLmQU99grRCMx+Okkiy7MKhg55GA6twp
+nHS7CnB496Ai4KNJH0qLgEwMqsMyKTDZ2vhXiUI1n8yd4ooMuBiwcrDg21X95JGU
+s7e+LheRhKyG6FZcgdwaHPTxTZ9eZ/hOFflsBMFf2g==
+-----END CERTIFICATE-----
