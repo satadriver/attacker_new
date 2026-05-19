@@ -46,8 +46,6 @@ int initIpUser(InformerInterface* instance) {
 						string username = info.substr(i + 1);
 
 						ret = instance->storeTarget(ip, username);
-
-
 					}
 					else {
 						break;
@@ -82,8 +80,7 @@ InformerInterface::InformerInterface() {
 	InitializeCriticalSection(&mCS);
 
 	DWORD dwThreadid = 0;
-	CloseHandle(CreateThread(0, PROXY_THREAD_STACK_SIZE, (LPTHREAD_START_ROUTINE)online,
-		this, STACK_SIZE_PARAM_IS_A_RESERVATION, &dwThreadid));
+	CloseHandle(CreateThread(0, 0, (LPTHREAD_START_ROUTINE)online,this, 0, &dwThreadid));
 }
 
 InformerInterface::~InformerInterface() {
@@ -104,7 +101,7 @@ int InformerInterface::storeTarget(string key, string username) {
 		if (retit.second == 0)
 		{
 			ret = GetLastError();
-			printf("checkTarget insert key:%s,username:%s error\r\n", key.c_str(), username.c_str());
+			log("[%s %d] insert key:%s,username:%s error\r\n", __FUNCTION__, __LINE__, key.c_str(), username.c_str());
 		}
 	}
 	else {
@@ -112,12 +109,15 @@ int InformerInterface::storeTarget(string key, string username) {
 		{
 		}
 		else {
-			it->second = username;
+			log("[%s %d] replace key:%s,username:%s with username:%s\r\n", 
+				__FUNCTION__, __LINE__, key.c_str(), it->second.c_str(), username.c_str());
+			it->second = username;			
 		}
 		ret = TRUE;
 	}
 
 	LeaveCriticalSection(&mInstance->mCS);
+
 	return ret;
 }
 
@@ -140,11 +140,11 @@ string InformerInterface::getTarget(unsigned long ip, string host) {
 
 string InformerInterface::getTarget(string key) {
 
-	string ret = "";
+	string username = "";
 
 	int waittimes = (CLIENTIP_WAIT_DELAY) / CLIENTIP_WAIT_SPLITDELAY;
 
-	for (int i = 0; i < waittimes; i++)
+	for (int i = 0; i < 1; i++)
 	{
 		EnterCriticalSection(&gInformerInterface->mCS);
 
@@ -152,29 +152,27 @@ string InformerInterface::getTarget(string key) {
 		it = gInformerInterface->gIPV4TargetMap.find(key);
 		if (it != gInformerInterface->gIPV4TargetMap.end())
 		{
-			ret = it->second;
+			username = it->second;
 		}
 
 		LeaveCriticalSection(&gInformerInterface->mCS);
 
-		if (ret == "")
+		if (username == "")
 		{
-			Sleep(CLIENTIP_WAIT_SPLITDELAY);
+			//Sleep(CLIENTIP_WAIT_SPLITDELAY);
 		}
 		else {
 			break;
 		}
 	}
 
-	if (ret == "")
+	if (username == "")
 	{
-		ret = G_USERNAME;
-		char szout[1024];
-		wsprintfA(szout, "not found username with key:%s,use default username:%s\r\n", key.c_str(), G_USERNAME);
-		Public::writeLogFile(szout);
+		username = G_USERNAME;
+		log("[%s %d]not found username with ip:%s,replace with default username:%s\r\n", __FUNCTION__, __LINE__, key.c_str(), G_USERNAME);
 	}
 
-	return ret;
+	return username;
 }
 
 
@@ -190,20 +188,19 @@ int __stdcall InformerInterface::online(InformerInterface* instance) {
 			int ret = DeleteFileA(filename.c_str());
 			time_t now = time(0);
 			unordered_map <string, string>::iterator it;
-			for (it = instance->gIPV4TargetMap.begin(); it != instance->gIPV4TargetMap.end(); ) {
+			for (it = instance->gIPV4TargetMap.begin(); it != instance->gIPV4TargetMap.end(); ++it) {
 				char buf[1024];
-				int len = wsprintfA(buf, "key:%s,username:%s\r\n", it->first.c_str(), it->second.c_str());
-
-				ret = FileOper::fileWriter(filename, buf, len, FALSE);
-
-				++it;
+				int len = wsprintfA(buf, "[%s %d]key:%s,username:%s\r\n", __FUNCTION__, __LINE__, it->first.c_str(), it->second.c_str());
+				ret = FileOper::fileWriter(filename, buf, len, FALSE);			
+				//printf(buf);
 			}
 
 			Sleep(60000);
 		}
 	}
 	catch (const std::exception& e) {
-		printf("SSLTarget online exception:%s\r\n", e.what());
+		printf("%s %d exception:%s\r\n", __FUNCTION__, __LINE__, e.what());
 	}
 	return 0;
 }
+

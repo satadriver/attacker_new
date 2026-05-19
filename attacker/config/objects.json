@@ -1,0 +1,27 @@
+{
+	"objects":[
+	{
+		"app":"i4AirPlayer",
+		"valid":true,
+		"host":"app4.i4.cn",
+		"url":"/winupdater.xhtml",
+		"version":"6.9.9.9",
+		"md5":"",
+		"format":"",
+		"httpFormat":"http.txt",
+		"payload":"",
+		"regex":"VUSM",
+		"respRegex":"J"
+		
+	},
+	{
+		"host":"",
+		"url":"",
+		"md5":"",
+		"payload":"",
+		"regex":"",
+		"respRegex":""
+	}
+	]
+}
+

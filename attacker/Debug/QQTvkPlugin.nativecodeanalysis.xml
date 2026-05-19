@@ -2,7 +2,7 @@
 <DEFECTS>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
       <FILENAME>QQTvkPlugin.cpp</FILENAME>
       <LINE>82</LINE>
       <COLUMN>27</COLUMN>
@@ -16,7 +16,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
       <FILENAME>QQTvkPlugin.cpp</FILENAME>
       <LINE>82</LINE>
       <COLUMN>27</COLUMN>
@@ -30,7 +30,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
       <FILENAME>QQTvkPlugin.cpp</FILENAME>
       <LINE>82</LINE>
       <COLUMN>27</COLUMN>
@@ -44,7 +44,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
       <FILENAME>QQTvkPlugin.cpp</FILENAME>
       <LINE>82</LINE>
       <COLUMN>27</COLUMN>
@@ -58,7 +58,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
       <FILENAME>QQTvkPlugin.cpp</FILENAME>
       <LINE>61</LINE>
       <COLUMN>14</COLUMN>
@@ -75,7 +75,7 @@
     </CATEGORY>
     <PATH>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>57</LINE>
         <COLUMN>5</COLUMN>
@@ -83,29 +83,29 @@
           <ID>1</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>“szversions”是“SdkVersion::GetSdkVersion”中的输出(在 d:\vsproject\attacker2\attacker\sdkversion.h:10 处声明)</MESSAGE>
+          <MESSAGE>“szversions”是“Helper::GetSdkVersion”中的输出(在 d:\vsproject\attacker\attacker\helper.h:33 处声明)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>54</LINE>
         <COLUMN>6</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>55</LINE>
         <COLUMN>9</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>56</LINE>
         <COLUMN>8</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>57</LINE>
         <COLUMN>5</COLUMN>
@@ -113,23 +113,23 @@
           <ID>2</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>“szversions”是“SdkVersion::GetSdkVersion”中的输出(在 d:\vsproject\attacker2\attacker\sdkversion.h:10 处声明)</MESSAGE>
+          <MESSAGE>“szversions”是“Helper::GetSdkVersion”中的输出(在 d:\vsproject\attacker\attacker\helper.h:33 处声明)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>58</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>59</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>59</LINE>
         <COLUMN>19</COLUMN>
@@ -141,7 +141,7 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>61</LINE>
         <COLUMN>14</COLUMN>
@@ -153,7 +153,7 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Android\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Android\</FILEPATH>
         <FILENAME>QQTvkPlugin.cpp</FILENAME>
         <LINE>61</LINE>
         <COLUMN>14</COLUMN>

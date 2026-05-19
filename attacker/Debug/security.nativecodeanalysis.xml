@@ -2,7 +2,7 @@
 <DEFECTS>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\</FILEPATH>
       <FILENAME>security.cpp</FILENAME>
       <LINE>126</LINE>
       <COLUMN>15</COLUMN>

@@ -12,6 +12,10 @@
 
 using namespace std;
 
+std::string get_http_time();
+
+unsigned long GetInetIPAddress();
+
 class HttpUtils {
 public:
 	static int getContentLen(string lphttpdata, int len);
@@ -59,6 +63,8 @@ public:
 	static string HttpUtils::getmac(unsigned char * mac);
 
 	static void HttpUtils::ipv4toipv6(unsigned char* ipv4, unsigned char * ipv6);
+
+	static char* ip2str(unsigned long ip);
 };
 
 #endif 

@@ -2,7 +2,7 @@
 <DEFECTS>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
       <FILENAME>QQMiniBrowser.cpp</FILENAME>
       <LINE>100</LINE>
       <COLUMN>27</COLUMN>
@@ -16,7 +16,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
       <FILENAME>QQMiniBrowser.cpp</FILENAME>
       <LINE>100</LINE>
       <COLUMN>27</COLUMN>
@@ -30,7 +30,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
       <FILENAME>QQMiniBrowser.cpp</FILENAME>
       <LINE>100</LINE>
       <COLUMN>27</COLUMN>
@@ -44,7 +44,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
       <FILENAME>QQMiniBrowser.cpp</FILENAME>
       <LINE>100</LINE>
       <COLUMN>27</COLUMN>
@@ -58,7 +58,7 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
       <FILENAME>QQMiniBrowser.cpp</FILENAME>
       <LINE>76</LINE>
       <COLUMN>14</COLUMN>
@@ -75,7 +75,7 @@
     </CATEGORY>
     <PATH>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>72</LINE>
         <COLUMN>5</COLUMN>
@@ -83,23 +83,23 @@
           <ID>1</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>“szversions”是“SdkVersion::GetSdkVersion”中的输出(在 d:\vsproject\attacker2\attacker\sdkversion.h:10 处声明)</MESSAGE>
+          <MESSAGE>“szversions”是“Helper::GetSdkVersion”中的输出(在 d:\vsproject\attacker\attacker\helper.h:33 处声明)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>62</LINE>
         <COLUMN>6</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>63</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>64</LINE>
         <COLUMN>17</COLUMN>
@@ -111,25 +111,25 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>68</LINE>
         <COLUMN>6</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>69</LINE>
         <COLUMN>9</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>71</LINE>
         <COLUMN>8</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>72</LINE>
         <COLUMN>5</COLUMN>
@@ -137,23 +137,23 @@
           <ID>3</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>“szversions”是“SdkVersion::GetSdkVersion”中的输出(在 d:\vsproject\attacker2\attacker\sdkversion.h:10 处声明)</MESSAGE>
+          <MESSAGE>“szversions”是“Helper::GetSdkVersion”中的输出(在 d:\vsproject\attacker\attacker\helper.h:33 处声明)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>73</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>74</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>74</LINE>
         <COLUMN>19</COLUMN>
@@ -165,7 +165,7 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>76</LINE>
         <COLUMN>14</COLUMN>
@@ -177,7 +177,7 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\Windows\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\Windows\</FILEPATH>
         <FILENAME>QQMiniBrowser.cpp</FILENAME>
         <LINE>76</LINE>
         <COLUMN>14</COLUMN>

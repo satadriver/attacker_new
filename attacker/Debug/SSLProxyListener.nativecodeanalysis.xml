@@ -2,9 +2,9 @@
 <DEFECTS>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
       <FILENAME>SSLProxyListener.cpp</FILENAME>
-      <LINE>46</LINE>
+      <LINE>47</LINE>
       <COLUMN>12</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
@@ -19,49 +19,49 @@
     </CATEGORY>
     <PATH>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>23</LINE>
         <COLUMN>11</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>25</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>27</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>28</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>29</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>31</LINE>
         <COLUMN>23</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>33</LINE>
         <COLUMN>7</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>34</LINE>
         <COLUMN>29</COLUMN>
@@ -73,21 +73,21 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>42</LINE>
+        <LINE>43</LINE>
         <COLUMN>27</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>44</LINE>
+        <LINE>45</LINE>
         <COLUMN>33</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>46</LINE>
+        <LINE>47</LINE>
         <COLUMN>12</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -97,9 +97,9 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>46</LINE>
+        <LINE>47</LINE>
         <COLUMN>12</COLUMN>
         <KEYEVENT>
           <ID>3</ID>
@@ -112,13 +112,13 @@
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
       <FILENAME>SSLProxyListener.cpp</FILENAME>
       <LINE>52</LINE>
       <COLUMN>13</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>“Temp_value_#823”可能是“0”: 这不符合函数“CloseHandle”的规范。</DESCRIPTION>
+    <DESCRIPTION>“Temp_value_#824”可能是“0”: 这不符合函数“CloseHandle”的规范。</DESCRIPTION>
     <FUNCTION>SSLProxyListener::{ctor}</FUNCTION>
     <DECORATED>??0SSLProxyListener@@QAE@XZ</DECORATED>
     <FUNCLINE>21</FUNCLINE>
@@ -129,49 +129,49 @@
     </CATEGORY>
     <PATH>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>23</LINE>
         <COLUMN>11</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>25</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>27</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>28</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>29</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>31</LINE>
         <COLUMN>23</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>33</LINE>
         <COLUMN>7</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>34</LINE>
         <COLUMN>29</COLUMN>
@@ -183,37 +183,37 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>42</LINE>
+        <LINE>43</LINE>
         <COLUMN>27</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>44</LINE>
+        <LINE>45</LINE>
         <COLUMN>33</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>46</LINE>
+        <LINE>47</LINE>
         <COLUMN>12</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>49</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>50</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>50</LINE>
         <COLUMN>19</COLUMN>
@@ -225,7 +225,7 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>52</LINE>
         <COLUMN>13</COLUMN>
@@ -237,7 +237,7 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>52</LINE>
         <COLUMN>13</COLUMN>
@@ -245,20 +245,20 @@
           <ID>4</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>“Temp_value_#823”不应为 NULL，因为这与“CloseHandle”上的 SAL 批注不一致</MESSAGE>
+          <MESSAGE>“Temp_value_#824”不应为 NULL，因为这与“CloseHandle”上的 SAL 批注不一致</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
       <FILENAME>SSLProxyListener.cpp</FILENAME>
       <LINE>52</LINE>
       <COLUMN>26</COLUMN>
     </SFA>
     <DEFECTCODE>6001</DEFECTCODE>
-    <DESCRIPTION>使用未初始化的内存“*Temp_value_#823”。</DESCRIPTION>
+    <DESCRIPTION>使用未初始化的内存“*Temp_value_#824”。</DESCRIPTION>
     <FUNCTION>SSLProxyListener::{ctor}</FUNCTION>
     <DECORATED>??0SSLProxyListener@@QAE@XZ</DECORATED>
     <FUNCLINE>21</FUNCLINE>
@@ -269,109 +269,109 @@
     </CATEGORY>
     <PATH>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>23</LINE>
         <COLUMN>11</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>25</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>27</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>28</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>29</LINE>
         <COLUMN>1</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>31</LINE>
         <COLUMN>23</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>33</LINE>
         <COLUMN>7</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>34</LINE>
         <COLUMN>29</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>42</LINE>
+        <LINE>43</LINE>
         <COLUMN>27</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>44</LINE>
+        <LINE>45</LINE>
         <COLUMN>33</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
-        <LINE>46</LINE>
+        <LINE>47</LINE>
         <COLUMN>12</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>49</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>50</LINE>
         <COLUMN>10</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>50</LINE>
         <COLUMN>19</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>52</LINE>
         <COLUMN>13</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>50</LINE>
         <COLUMN>27</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>50</LINE>
         <COLUMN>19</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>52</LINE>
         <COLUMN>13</COLUMN>
@@ -379,11 +379,11 @@
           <ID>1</ID>
           <KIND>declaration</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>未初始化“*Temp_value_#823”</MESSAGE>
+          <MESSAGE>未初始化“*Temp_value_#824”</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>SSLProxyListener.cpp</FILENAME>
         <LINE>52</LINE>
         <COLUMN>26</COLUMN>
@@ -391,14 +391,14 @@
           <ID>2</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>已使用“*Temp_value_#823”，但可能尚未将其初始化</MESSAGE>
+          <MESSAGE>已使用“*Temp_value_#824”，但可能尚未将其初始化</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
       <FILENAME>SSLProxyListener.cpp</FILENAME>
       <LINE>106</LINE>
       <COLUMN>12</COLUMN>

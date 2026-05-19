@@ -3,7 +3,7 @@
 #include "sslPublic.h"
 #include "../HttpUtils.h"
 #include "HttpProxy.h"
-#include "PluginServer.h"
+#include "PayloadServer.h"
 #include "HttpAttack.h"
 #include "../Public.h"
 #include "../Deamon.h"
@@ -26,11 +26,11 @@ int HttpProxy::HttpProxyMain(LPHTTPPROXYPARAM hpp) {
 	*(recvBuffer + iCounter) = 0;
 
 	iRet = HttpAttack::httpAttackProc((char*)recvBuffer, iCounter, hpp);
-	if (iRet > 0 )
+	if (iRet > 0)
 	{
 		return FALSE;
 	}
-
+	
 	DWORD dwip = HttpUtils::getIPFromHost(hpp->host);
 	if (dwip == 0) {
 #ifdef _DEBUG

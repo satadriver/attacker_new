@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\vsproject\attacker2\Debug\deamonAttacker.exe</FullPath>
+      <FullPath>D:\vsproject\attacker\Debug\deamonAttacker.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

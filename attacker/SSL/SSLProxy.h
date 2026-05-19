@@ -19,13 +19,13 @@ public:
 
 	static int SSLProxy::ReadPendingData(char * lpdata, int size, SSL * ssl);
 
-	static int SSLProxy::SSL_ProxyMain(LPSSLPROXYPARAM pstSSLProxyParam);
+	static int SSLProxy::SSL_ProxyMain(LPSSLPROXYPARAM spp);
 
-	static int SSLProxy::SSL_ProxyClient(LPSSLPROXYPARAM pstSSLProxyParam);
+	static int SSLProxy::SSL_ProxyClient(LPSSLPROXYPARAM spp);
 
 	static int __stdcall SSLProxy::SSL_Proxy(MIM_THREAD_PARAMS * param);
 
-	static int SSLProxy::getServerNameFromClientHello(char * data, int len,unsigned char * servername,int & version);
+	static int SSLProxy::getServerNameFromClientHello(char * data, int len, char * host,int & version);
 
 };
 

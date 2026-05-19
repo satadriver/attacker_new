@@ -2,16 +2,16 @@
 <DEFECTS>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
       <FILENAME>InformerServer.cpp</FILENAME>
-      <LINE>66</LINE>
+      <LINE>67</LINE>
       <COLUMN>12</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>“Temp_value_#830”可能是“0”: 这不符合函数“CloseHandle”的规范。</DESCRIPTION>
+    <DESCRIPTION>“Temp_value_#855”可能是“0”: 这不符合函数“CloseHandle”的规范。</DESCRIPTION>
     <FUNCTION>InformerServer::{ctor}</FUNCTION>
     <DECORATED>??0InformerServer@@QAE@XZ</DECORATED>
-    <FUNCLINE>58</FUNCLINE>
+    <FUNCLINE>59</FUNCLINE>
     <PROBABILITY>1</PROBABILITY>
     <RANK>4</RANK>
     <CATEGORY>
@@ -19,27 +19,27 @@
     </CATEGORY>
     <PATH>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>60</LINE>
+        <LINE>61</LINE>
         <COLUMN>11</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>62</LINE>
-        <COLUMN>10</COLUMN>
+        <LINE>63</LINE>
+        <COLUMN>12</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>64</LINE>
-        <COLUMN>6</COLUMN>
+        <LINE>65</LINE>
+        <COLUMN>12</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>66</LINE>
+        <LINE>67</LINE>
         <COLUMN>12</COLUMN>
         <KEYEVENT>
           <ID>1</ID>
@@ -49,195 +49,31 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>66</LINE>
+        <LINE>67</LINE>
         <COLUMN>12</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>“Temp_value_#830”不应为 NULL，因为这与“CloseHandle”上的 SAL 批注不一致</MESSAGE>
+          <MESSAGE>“Temp_value_#855”不应为 NULL，因为这与“CloseHandle”上的 SAL 批注不一致</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
   </DEFECT>
   <DEFECT>
     <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+      <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
       <FILENAME>InformerServer.cpp</FILENAME>
-      <LINE>97</LINE>
-      <COLUMN>27</COLUMN>
-    </SFA>
-    <DEFECTCODE>6001</DEFECTCODE>
-    <DESCRIPTION>使用未初始化的内存“*Temp_value_#840”。</DESCRIPTION>
-    <FUNCTION>InformerServer::informerListener</FUNCTION>
-    <DECORATED>?informerListener@InformerServer@@SGHPAV1@@Z</DECORATED>
-    <FUNCLINE>75</FUNCLINE>
-    <PROBABILITY>1</PROBABILITY>
-    <RANK>3</RANK>
-    <CATEGORY>
-      <RULECATEGORY>mspft</RULECATEGORY>
-    </CATEGORY>
-    <PATH>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>77</LINE>
-        <COLUMN>5</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>78</LINE>
-        <COLUMN>22</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>86</LINE>
-        <COLUMN>17</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>87</LINE>
-        <COLUMN>8</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>89</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>90</LINE>
-        <COLUMN>8</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>91</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>92</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>94</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>95</LINE>
-        <COLUMN>23</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>97</LINE>
-        <COLUMN>14</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>99</LINE>
-        <COLUMN>8</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>87</LINE>
-        <COLUMN>8</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>89</LINE>
-        <COLUMN>6</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>90</LINE>
-        <COLUMN>8</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>91</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>92</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>94</LINE>
-        <COLUMN>19</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>95</LINE>
-        <COLUMN>23</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>97</LINE>
-        <COLUMN>14</COLUMN>
-        <KEYEVENT>
-          <ID>1</ID>
-          <KIND>declaration</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>未初始化“*Temp_value_#840”</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>99</LINE>
-        <COLUMN>8</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>97</LINE>
-        <COLUMN>27</COLUMN>
-        <KEYEVENT>
-          <ID>2</ID>
-          <KIND>usage</KIND>
-          <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>已使用“*Temp_value_#840”，但可能尚未将其初始化</MESSAGE>
-        </KEYEVENT>
-      </SFA>
-    </PATH>
-  </DEFECT>
-  <DEFECT>
-    <SFA>
-      <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-      <FILENAME>InformerServer.cpp</FILENAME>
-      <LINE>97</LINE>
+      <LINE>100</LINE>
       <COLUMN>14</COLUMN>
     </SFA>
     <DEFECTCODE>6387</DEFECTCODE>
-    <DESCRIPTION>“Temp_value_#840”可能是“0”: 这不符合函数“CloseHandle”的规范。</DESCRIPTION>
+    <DESCRIPTION>“Temp_value_#867”可能是“0”: 这不符合函数“CloseHandle”的规范。</DESCRIPTION>
     <FUNCTION>InformerServer::informerListener</FUNCTION>
     <DECORATED>?informerListener@InformerServer@@SGHPAV1@@Z</DECORATED>
-    <FUNCLINE>75</FUNCLINE>
+    <FUNCLINE>77</FUNCLINE>
     <PROBABILITY>1</PROBABILITY>
     <RANK>4</RANK>
     <CATEGORY>
@@ -245,33 +81,33 @@
     </CATEGORY>
     <PATH>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>77</LINE>
+        <LINE>79</LINE>
         <COLUMN>5</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>78</LINE>
-        <COLUMN>22</COLUMN>
+        <LINE>80</LINE>
+        <COLUMN>16</COLUMN>
         <KEYEVENT>
           <ID>1</ID>
           <KIND>branch</KIND>
           <IMPORTANCE>Full</IMPORTANCE>
-          <MESSAGE>跳过此分支(假定“targetServerSock==(SOCKET)(~0)”为 false)</MESSAGE>
+          <MESSAGE>跳过此分支(假定“serverSock==(SOCKET)(~0)”为 false)</MESSAGE>
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>86</LINE>
+        <LINE>89</LINE>
         <COLUMN>17</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>87</LINE>
+        <LINE>90</LINE>
         <COLUMN>8</COLUMN>
         <KEYEVENT>
           <ID>2</ID>
@@ -281,39 +117,39 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>89</LINE>
+        <LINE>92</LINE>
         <COLUMN>6</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>90</LINE>
+        <LINE>93</LINE>
         <COLUMN>8</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>91</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
-        <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>92</LINE>
-        <COLUMN>24</COLUMN>
-      </SFA>
-      <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
         <LINE>94</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>97</LINE>
         <COLUMN>19</COLUMN>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>95</LINE>
+        <LINE>98</LINE>
         <COLUMN>23</COLUMN>
         <KEYEVENT>
           <ID>3</ID>
@@ -323,9 +159,9 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>97</LINE>
+        <LINE>100</LINE>
         <COLUMN>14</COLUMN>
         <KEYEVENT>
           <ID>4</ID>
@@ -335,15 +171,179 @@
         </KEYEVENT>
       </SFA>
       <SFA>
-        <FILEPATH>D:\vsproject\attacker2\attacker\ssl\</FILEPATH>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
         <FILENAME>InformerServer.cpp</FILENAME>
-        <LINE>97</LINE>
+        <LINE>100</LINE>
         <COLUMN>14</COLUMN>
         <KEYEVENT>
           <ID>5</ID>
           <KIND>usage</KIND>
           <IMPORTANCE>Essential</IMPORTANCE>
-          <MESSAGE>“Temp_value_#840”不应为 NULL，因为这与“CloseHandle”上的 SAL 批注不一致</MESSAGE>
+          <MESSAGE>“Temp_value_#867”不应为 NULL，因为这与“CloseHandle”上的 SAL 批注不一致</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+      <FILENAME>InformerServer.cpp</FILENAME>
+      <LINE>100</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>使用未初始化的内存“*Temp_value_#867”。</DESCRIPTION>
+    <FUNCTION>InformerServer::informerListener</FUNCTION>
+    <DECORATED>?informerListener@InformerServer@@SGHPAV1@@Z</DECORATED>
+    <FUNCLINE>77</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>79</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>80</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>89</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>90</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>92</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>93</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>97</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>98</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>100</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>101</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>90</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>92</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>93</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>94</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>95</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>97</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>98</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>100</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>未初始化“*Temp_value_#867”</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>101</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\vsproject\attacker\attacker\ssl\</FILEPATH>
+        <FILENAME>InformerServer.cpp</FILENAME>
+        <LINE>100</LINE>
+        <COLUMN>27</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>已使用“*Temp_value_#867”，但可能尚未将其初始化</MESSAGE>
         </KEYEVENT>
       </SFA>
     </PATH>
